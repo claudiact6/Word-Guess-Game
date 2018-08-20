@@ -1,0 +1,29 @@
+body {
+    background: #f27ba7;
+}
+
+h1, h2{
+    font-family: 'Open Sans', sans-serif;
+    color: #181e5b;
+}
+
+h4 {
+    color: #181e5b;
+}
+
+hr {
+    border-color: #ed6002;
+}
+
+p {
+    color:#181e5b;
+}
+
+#artblur {
+    filter: blur(10px);
+    max-height: 200px;
+}
+
+#artclear {
+    max-height: 200px;
+}
