@@ -12,11 +12,20 @@ h4 {
 }
 
 hr {
-    border-color: #ed6002;
+    border-color: #181e5b;
 }
 
 p {
     color:#181e5b;
+}
+
+a {
+    color:#f27ba7;
+}
+
+#start {
+    background-color:#181e5b;
+    color: #f27ba7;
 }
 
 #artblur {
