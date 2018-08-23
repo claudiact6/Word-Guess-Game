@@ -161,6 +161,7 @@ function checkLoss() {
     console.log(stroke);
     if (guesses === 0) {
         resetVar();
+        $("#instructions").hide();
         $("#artcontain").html("<img src='" + chosenartist.artwork + "' id='artclear' class='img-thumbnail' />");
         $("#message").html("You lost! If you found this difficult, it might be interesting to <a href='https://www.theguardian.com/lifeandstyle/2017/feb/06/how-the-art-world-airbrushed-female-artists-from-history' target='_blank'>ask yourself why</a> you haven't heard of these artists.");
         $("#artinfo").html("The featured piece was <span style='font-style: italic;'>" + chosenartist.art_name + "</span> by " + chosenartist.name + ".");
@@ -179,6 +180,7 @@ function checkWin() {
     console.log(characters + "are the characters i have guessed");
     if (characters === chosenartist.name.length) {
         resetVar();
+        $("#instructions").hide();
         $("#artcontain").html("<img src='" + chosenartist.artwork + "' id='artclear' class='img-thumbnail' />");
         $("#message").html("You won!");
         $("#artinfo").html("This is <span style='font-style: italic;'>" + chosenartist.art_name + "</span> by " + chosenartist.name + ".");
