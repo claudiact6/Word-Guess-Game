@@ -34,9 +34,10 @@ a {
 }
 
 #artclear {
-    max-height: 200px;
+    max-height: 400px;
 }
 
 #artgray {
+    max-height:200px;
     filter: grayscale(100%);
 }
