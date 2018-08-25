@@ -175,9 +175,6 @@ function checkLoss() {
                     display the stuff we need to see upon winning. */
 function checkWin() {
     console.log("checking if won");
-    console.log(stroke);
-    console.log(chosenartist.name.length + "is correct length");
-    console.log(characters + "are the characters i have guessed");
     if (characters === chosenartist.name.length) {
         resetVar();
         $("#instructions").hide();
@@ -206,7 +203,7 @@ $(document).ready(function () {
             /*If the selected letter has already been added to the "guessed" array 
             (because you already guessed it), alert that you already guessed it*/
             if (guessed.includes(stroke)) {
-                console.log("You already guessed that!");
+                alert("You already guessed that!");
             } else {
                 //Or if it's not already in the guessed array, add it
                 guessed.push(stroke);
@@ -220,7 +217,7 @@ $(document).ready(function () {
                 checkWin();
             }
         } else {
-            console.log("not a letter");
+            alert("That's not a letter, silly!");
             stroke = "";
             return;
         }
