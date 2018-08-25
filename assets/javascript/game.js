@@ -197,34 +197,35 @@ $(document).ready(function () {
         resetVar();
         newGame();
         pickArtist();
-        $(document).on("keyup", function (e) {
-            stroke = e.key;
-            /* Check whether the key is a letter */ 
-            if (e.keyCode === 186 || e.keyCode >= 65 && e.keyCode <= 90) {
-                console.log("5. check for repeated guess or add guess");
-                /*If the selected letter has already been added to the "guessed" array 
-                (because you already guessed it), alert that you already guessed it*/
-                if (guessed.includes(stroke)) {
-                    console.log("You already guessed that!");
-                } else {
-                    //Or if it's not already in the guessed array, add it
-                    guessed.push(stroke);
-                    //Match guessed letter to positions in word
-                    indexMatch();
-                    //Show letters (or: subtract guesses if letter is wrong)
-                    printLetters();
-                    //Check if we've lost (does "guesses" equal 0?)
-                    checkLoss();
-                    //Check if we've won (does "characters" equal letters in word?)
-                    checkWin();
-                }
-            } else {
-                console.log("not a letter");
-                stroke = "";
-                return;
-            }
-            stroke="";
-        });
-
     });
+    $(document).on("keyup", function (e) {
+        stroke = e.key;
+        /* Check whether the key is a letter */
+        if (e.keyCode === 186 || e.keyCode >= 65 && e.keyCode <= 90) {
+            console.log("5. check for repeated guess or add guess");
+            /*If the selected letter has already been added to the "guessed" array 
+            (because you already guessed it), alert that you already guessed it*/
+            if (guessed.includes(stroke)) {
+                console.log("You already guessed that!");
+            } else {
+                //Or if it's not already in the guessed array, add it
+                guessed.push(stroke);
+                //Match guessed letter to positions in word
+                indexMatch();
+                //Show letters (or: subtract guesses if letter is wrong)
+                printLetters();
+                //Check if we've lost (does "guesses" equal 0?)
+                checkLoss();
+                //Check if we've won (does "characters" equal letters in word?)
+                checkWin();
+            }
+        } else {
+            console.log("not a letter");
+            stroke = "";
+            return;
+        }
+        stroke = "";
+    });
+
+
 });
