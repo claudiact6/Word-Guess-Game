@@ -16,7 +16,7 @@ var artist2 = {
 
 var artist3 = {
     "name": "Johanna Toruño",
-    "artwork": "assets/images/art3.jpg",
+    "artwork": "assets/images/art3.JPG",
     "art_name": "The Unapologetically Brown Series",
     "info": "https://theunapologeticallybrownseries.format.com/"
 }
